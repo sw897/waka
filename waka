@@ -1,0 +1,12 @@
+#! /bin/sh
+
+cp egg.pl ..
+git reset --hard start
+mv ../egg.pl .
+git tag -d start
+git add egg.pl
+git commit -m "Waka waka!"
+git tag start
+perl ./egg.pl
+git push --tags origin master
+
